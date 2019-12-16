@@ -18,7 +18,7 @@ function solution(list) {
 
   let newArr = [];
   for (let index = 0; index < list.length; index += 1) {
-    if (list[index] + 2 === list[index + 2]) {
+    if (list[index] + 1 === list[index + 1] && list[index] + 2 === list[index + 2]) {
       const slicedInterval = findInterval(list, list[index], index);
       index = slicedInterval[0];
       const [, startEl, endEl] = slicedInterval;
